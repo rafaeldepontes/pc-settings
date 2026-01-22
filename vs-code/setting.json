@@ -1,0 +1,134 @@
+{
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+  },
+  // Yes.. I'm using this baddy!!
+  "workbench.colorTheme": "Dracula Theme",
+  "terminal.integrated.bellDuration": 10000,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "security.workspace.trust.untrustedFiles": "open",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+  "window.customTitleBarVisibility": "windowed",
+  "explorer.confirmPasteNative": false,
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+
+  // ---- Golang configs ----
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": false,
+  },
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+  "go.formatTool": "gofmt",
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "workspace",
+  "go.testOnSave": false,
+  "go.vetOnSave": "workspace",
+  "go.inlayHints.assignVariableTypes": false,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.stickyScroll.enabled": false,
+
+  // ---- Zen Mode ----
+  "zenMode.hideActivityBar": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+
+  // ---- Files ----
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  // If running java, turn this on.
+  "explorer.compactFolders": false,
+
+  // ---- UI minimalism ----
+  "workbench.editor.showTabs": "none",
+  "workbench.activityBar.location": "default",
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+
+  // ---- Clean visuals ----
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.renderLineHighlight": "none",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+
+  // ---- Typography ----
+  "editor.fontFamily": "JetBrains Mono, Fira Code, Roboto Mono, monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
+  "editor.lineHeight": 22,
+  "editor.lineNumbers": "relative",
+
+  // ---- Editing behavior ----
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+
+  // ---- MUI settings ----
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.folders.associations": {
+    "cmd": "command",
+    "internal": "private",
+    "pkg": "command",
+    "api": "api",
+    "configs": "config",
+    "config": "config",
+    "scripts": "scripts",
+    "deploy": "docker",
+    "build": "tools",
+    "test": "test",
+    "tests": "test",
+    "migrations": "database",
+    "db": "database",
+  },
+  "material-icon-theme.files.associations": {
+    "go.mod": "go-mod",
+    "go.sum": "go-mod",
+    "*.go": "go",
+    "*.tmpl": "template",
+    "*.sql": "database",
+    "*.env": "tune",
+    "*.yaml": "yaml",
+    "*.yml": "yaml",
+  },
+
+  // ---- Vim Config ----
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"],
+    },
+  ],
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
+  },
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-server-connector",
+      "name": "JBoss Toolkit",
+      "startOnActivation": true,
+    },
+  ],
+}
