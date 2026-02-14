@@ -5,10 +5,10 @@
     "markdown": false,
     "scminput": false,
   },
-  // Yes.. I'm using this baddy!!
   "workbench.colorTheme": "Dracula Theme",
   "terminal.integrated.bellDuration": 10000,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // "terminal.integrated.defaultProfile.windows": "PowerShell",
   "security.workspace.trust.untrustedFiles": "open",
   "liveServer.settings.donotShowInfoMsg": true,
   "[typescriptreact]": {
@@ -62,6 +62,8 @@
 
   // ---- Clean visuals ----
   "editor.minimap.enabled": false,
+  // Bread Crumbs -> User -> Rafael -> <something> -> ...
+  // Bread Crumbs, if you want it back... set it to true
   "breadcrumbs.enabled": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontal": "hidden",
@@ -114,13 +116,28 @@
   },
 
   // ---- Vim Config ----
+  "vim.vimrc.enable": true,
+  "vim.easymotion": true,
+  "vim.useCtrlKeys": true,
+  "vim.vimrc.path": "c:\\Users\\Usuário\\AppData\\Roaming\\Code\\User\\.vimrc",
   "vim.useSystemClipboard": true,
+  "vim.scrolloff": 10,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
+      "before": ["j", "j"],
       "after": ["<Esc>"],
     },
   ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-c>": false,
+    "<C-j>": false,
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+  },
   "[dockercompose]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-containers",
   },
@@ -131,4 +148,6 @@
       "startOnActivation": true,
     },
   ],
+  "workbench.startupEditor": "none",
+  "editor.cursorSurroundingLines": 10,
 }
