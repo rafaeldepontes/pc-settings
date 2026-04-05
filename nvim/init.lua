@@ -78,6 +78,9 @@ vim.o.scrolloff = 15
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Background global flag
+vim.g.transparent_bg = false
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -87,6 +90,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Leaves insert mode pressing jj
 vim.keymap.set('i', 'jj', '<Esc>')
+
+-- When pressing tab, indent even while normal mode
+vim.keymap.set('n', '<Tab>', '>>')
+vim.keymap.set('n', '<S-Tab>', '<<')
 
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
@@ -733,8 +740,10 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
+        transparent = vim.g.transparent_bg,
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          -- Disable italics in comments
+          comments = { italic = false },
         },
       }
 
@@ -742,6 +751,20 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.cmd.colorscheme 'tokyonight-night'
+
+      vim.keymap.set('n', '<leader>tb', function()
+        vim.g.transparent_bg = not vim.g.transparent_bg
+
+        ---@diagnostic disable-next-line: missing-fields
+        require('tokyonight').setup {
+          transparent = vim.g.transparent_bg,
+          styles = {
+            comments = { italic = false },
+          },
+        }
+
+        vim.cmd.colorscheme 'tokyonight-night'
+      end, { desc = 'Toggle transparent background' })
     end,
   },
 
