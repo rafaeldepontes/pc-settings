@@ -1,26 +1,13 @@
 {
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-  },
-  "workbench.colorTheme": "Dracula Theme",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "terminal.integrated.bellDuration": 10000,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  // "terminal.integrated.defaultProfile.windows": "PowerShell",
   "security.workspace.trust.untrustedFiles": "open",
-  "liveServer.settings.donotShowInfoMsg": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "window.customTitleBarVisibility": "windowed",
   "explorer.confirmPasteNative": false,
-
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-
   // ---- Golang configs ----
   "[go]": {
     "editor.defaultFormatter": "golang.go",
@@ -40,18 +27,15 @@
   "go.inlayHints.rangeVariableTypes": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.stickyScroll.enabled": false,
-
   // ---- Zen Mode ----
   "zenMode.hideActivityBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
-
   // ---- Files ----
   "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   // If running java, turn this on.
   "explorer.compactFolders": false,
-
   // ---- UI minimalism ----
   "workbench.editor.showTabs": "none",
   "workbench.activityBar.location": "default",
@@ -59,7 +43,6 @@
   "workbench.sideBar.location": "right",
   "workbench.layoutControl.enabled": false,
   "window.commandCenter": false,
-
   // ---- Clean visuals ----
   "editor.minimap.enabled": false,
   // Bread Crumbs -> User -> Rafael -> <something> -> ...
@@ -70,7 +53,6 @@
   "editor.renderLineHighlight": "none",
   "editor.guides.indentation": false,
   "editor.guides.bracketPairs": false,
-
   // ---- Typography ----
   "editor.fontFamily": "JetBrains Mono, Fira Code, Roboto Mono, monospace",
   "editor.fontLigatures": true,
@@ -78,14 +60,12 @@
   "terminal.integrated.fontSize": 12,
   "editor.lineHeight": 22,
   "editor.lineNumbers": "relative",
-
   // ---- Editing behavior ----
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
-
   // ---- MUI settings ----
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.activeIconPack": "react_redux",
@@ -114,18 +94,22 @@
     "*.yaml": "yaml",
     "*.yml": "yaml",
   },
-
   // ---- Vim Config ----
   "vim.vimrc.enable": true,
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
-  "vim.vimrc.path": "c:\\Users\\Usuário\\AppData\\Roaming\\Code\\User\\.vimrc",
+  "vim.vimrc.path": "/home/rafael/c:\\Users\\Usuário\\AppData\\Roaming\\Code\\User\\.vimrc",
   "vim.useSystemClipboard": true,
   "vim.scrolloff": 10,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"],
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ],
     },
   ],
   "vim.handleKeys": {
@@ -138,16 +122,7 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1,
   },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
-  },
-  "rsp-ui.enableStartServerOnActivation": [
-    {
-      "id": "redhat.vscode-server-connector",
-      "name": "JBoss Toolkit",
-      "startOnActivation": true,
-    },
-  ],
   "workbench.startupEditor": "none",
   "editor.cursorSurroundingLines": 10,
+  "glassit.alpha": 255,
 }
