@@ -63,6 +63,10 @@ vim.o.splitbelow = true
 --   and `:help lua-guide-options`
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
@@ -90,6 +94,9 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Leaves insert mode pressing jj
 vim.keymap.set('i', 'jj', '<Esc>')
+
+-- Allows CTRL + a to full selection...
+vim.keymap.set('n', '<C-a>', 'ggVG')
 
 -- When pressing tab, indent even while normal mode
 vim.keymap.set('n', '<Tab>', '>>')
@@ -664,7 +671,11 @@ require('lazy').setup({
           --   end,
           -- },
         },
-        opts = {},
+        opts = {
+          keymap = {
+            preset = 'enter',
+          },
+        },
       },
     },
     ---@module 'blink.cmp'
