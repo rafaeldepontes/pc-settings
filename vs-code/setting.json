@@ -1,4 +1,6 @@
-{
+{ 
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "terminal.integrated.bellDuration": 10000,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "security.workspace.trust.untrustedFiles": "open",
@@ -17,9 +19,6 @@
   "go.toolsManagement.autoUpdate": true,
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
-  "go.lintFlags": [
-    "--config=${workspaceFolder}/.golangci.yml"
-  ],
   "go.lintOnSave": "workspace",
   "go.testOnSave": false,
   "go.vetOnSave": "workspace",
@@ -33,11 +32,9 @@
   "zenMode.hideActivityBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
-  // ---- Files ----
-  "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   // If running java, turn this on.
-  "explorer.compactFolders": true,
+  "explorer.compactFolders": false,
   // ---- UI minimalism ----
   "workbench.activityBar.location": "hidden",
   "workbench.editor.showTabs": "none",
@@ -46,8 +43,23 @@
   "workbench.layoutControl.enabled": false,
   "workbench.tips.enabled": false,
   "window.commandCenter": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 8,
+  "explorer.confirmDragAndDrop": false,
+  "custom-ui-style.stylesheet": {
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    ".quick-input-widget": "top: 25vh !important",
+    ".quick-input-list .scrollbar": "display: none",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px"
+  },
+  "custom-ui-style.font.sansSerif": "JetBrains Mono, Fira Code, Roboto Mono, monospace",
   // ---- Clean visuals ----
   "editor.minimap.enabled": false,
+  // Bread Crumbs -> User -> Rafael -> <something> -> ...
+  // Bread Crumbs, if you want it back... set it to true
   "breadcrumbs.enabled": false,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontal": "hidden",
@@ -97,9 +109,12 @@
     "*.yml": "yaml",
   },
   // ---- Vim Config ----
-  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
   "vim.easymotion": true,
   "vim.useCtrlKeys": true,
+  "vim.vimrc.path": "/home/rafael/c:\\Users\\Usuário\\AppData\\Roaming\\Code\\User\\.vimrc",
+  "vim.useSystemClipboard": true,
+  "vim.scrolloff": 10,
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -112,38 +127,23 @@
     },
   ],
   "vim.handleKeys": {
-    "<C-c>": false,
-    "<C-f>": false,
     "<C-a>": false,
+    "<C-f>": false,
     "<C-p>": false,
+    "<C-c>": false,
+    "<C-j>": false,
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
   },
   "workbench.startupEditor": "none",
-  "editor.cursorSurroundingLines": 11,
-  "workbench.editorAssociations": {
-    "*.class": "default"
-  },
-  "editor.defaultFormatter": "golang.go",
-  "git.confirmSync": false,
-  "explorer.confirmDragAndDrop": false,
-  "terminal.integrated.initialHint": false,
-  "workbench.editor.enablePreview": false,
+  "editor.cursorSurroundingLines": 10,
   "glassit.alpha": 255,
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "python.analysis.typeCheckingMode": "standard",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[python]": {
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.defaultColorDecorators": "never",
-    "gitlens.codeLens.symbolScopes": [
-      "!Module"
-    ],
-    "editor.formatOnType": true,
-    "editor.wordBasedSuggestions": "off",
-    "editor.defaultFormatter": "ms-python.python"
-  }
 }
